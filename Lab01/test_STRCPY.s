@@ -58,14 +58,14 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
-    
+    LDRB    W2, [X0]
     // -------------------------------------------------------------------------
     // TODO #2: Store the byte from W2 to the destination address [X1]
     // Syntax: STRB Wt, [Xn]   (Store Register Byte)
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
-    
+     STRB    W2, [X1]
     // -------------------------------------------------------------------------
     // TODO #3: Check if the byte was the null terminator (0)
     // If W2 == 0, branch to 'done'
@@ -73,7 +73,7 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
-    
+    CBZ     W2, done
     // -------------------------------------------------------------------------
     // TODO #4: Increment both pointers to the next byte
     // You need TWO ADD instructions (one for X0, one for X1)
@@ -81,14 +81,15 @@ copy_loop:
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE (two lines)
-    
+    ADD     X0, X0, #1
+    ADD     X1, X1, #1
     // -------------------------------------------------------------------------
     // TODO #5: Loop back to copy the next character
     // Syntax: B label   (Branch - unconditional jump)
     // -------------------------------------------------------------------------
     
     // YOUR CODE HERE
-
+    B       copy_loop
     // =========================================================================
     // STEP 3: Signal Completion (Already done for you)
     // =========================================================================
