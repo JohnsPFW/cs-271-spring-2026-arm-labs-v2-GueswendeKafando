@@ -2,8 +2,8 @@
 // CS 271 Computer Architecture - Lab 01: String Copy (STRCPY)
 // Purdue University Fort Wayne
 // =============================================================================
-// STUDENT NAME: ___________________
-// DATE:         ___________________
+// STUDENT NAME: Gueswende Kafando
+// DATE:        2026
 // =============================================================================
 // OBJECTIVE:
 //   Implement a loop that copies a null-terminated string from a source

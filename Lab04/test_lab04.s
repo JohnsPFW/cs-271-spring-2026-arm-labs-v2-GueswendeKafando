@@ -2,8 +2,8 @@
 // CS 271 Computer Architecture - Lab 04: Pipeline Hazards
 // Purdue University Fort Wayne
 // =============================================================================
-// STUDENT NAME: ___________________
-// DATE:         ___________________
+// STUDENT NAME: Gueswende kafando
+// DATE:         04/2026
 // =============================================================================
 // OBJECTIVE:
 //   Understand how pipelining affects instruction execution and learn to
@@ -56,9 +56,12 @@ _start:
     
 _test2:
     ADD     X9, X1, X2          // X9 = X1 + X2 = 27
-    AND     X10, X9, X3         // X10 = X9 AND X3 (HAZARD: X9 not ready!)
-    ORR     X11, X5, X9         // X11 = X5 OR X9
-    SUB     X12, X9, X7         // X12 = X9 - X7
+    NOP                         // Delay cycle 1
+    NOP                         // Delay cycle 2
+    NOP                         // Delay cycle 3 (X9 is now being written back)
+    AND     X10, X9, X3         // X10 can now safely read the updated X9
+    ORR     X11, X5, X9         
+    SUB     X12, X9, X7
     
     // =========================================================================
     // PART 4: NOPs for Pipeline Timing

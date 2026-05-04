@@ -2,8 +2,8 @@
 // CS 271 Computer Architecture - Lab 03: Instruction Exploration
 // Purdue University Fort Wayne
 // =============================================================================
-// STUDENT NAME: ___________________
-// DATE:         ___________________
+// STUDENT NAME: Gueswende Kafando
+// DATE:         2026
 // =============================================================================
 // OBJECTIVE:
 //   Explore various ARM64 instruction types by predicting and verifying
